@@ -93,11 +93,11 @@ RUN chmod +x /tmp/autopilot-linux && \
   cf install-plugin /tmp/autopilot-linux -f && \
   rm -f /tmp/autopilot-linux
 
-# Install yaml cli
-ADD https://github.com/mikefarah/yaml/releases/download/1.10/yaml_linux_amd64 /tmp/yaml_linux_amd64
-RUN install /tmp/yaml_linux_amd64 /usr/local/bin/yaml && \
-  yaml --help && \
-  rm -f /tmp/yaml_linux_amd64
+# # Install yaml cli
+# ADD https://github.com/mikefarah/yaml/releases/download/1.10/yaml_linux_amd64 /tmp/yaml_linux_amd64
+# RUN install /tmp/yaml_linux_amd64 /usr/local/bin/yaml && \
+#   yaml --help && \
+#   rm -f /tmp/yaml_linux_amd64
   
 ADD https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VERSION.zip /tmp/sonarscanner.zip
 RUN unzip /tmp/sonarscanner.zip -d /opt/sonarscanner && \
